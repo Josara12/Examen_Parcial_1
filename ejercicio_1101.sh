@@ -12,6 +12,10 @@ b=`head -n 1 ../data/Marra2014_data.fasta | grep -o " " | wc -l`
 echo Número de filas $a
 echo Número de columnas $b
 
+cp ../data/Marra2014_data.fasta . 
+cp Marra2014_data.fasta my_file.fasta
+
+rm Marra2014_data.fasta
  
 
 
