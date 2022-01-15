@@ -22,20 +22,30 @@ rm Marra2014_data.fasta
 
 #Literal 4 
 echo ¿Cuántos contigs están clasificados como isogroup00036?
-#Bucar y contabilizar las veces que tiene la palabra isoproupo00036 en el archivo
+
 a=`grep -c isogroup00036 my_file.fasta`
 echo contigs $a
-#grep -c  primero buscará en el archivo la palabra indicada 
-#y contará las veces que se repita  
+#grep -c  primero buscará en el archivo la palabra indicada y contará las veces que se repita  
 
 #Literal 5
 echo Sustituya el delimitador original de "dos espacios" por una coma.
 #
-cat my_file.fasta | tr -s ' ' ',' | head -n 3
+cat my_file.fasta | tr -s ' ' ',' >my_file.tmp
+mv my_file.tmp my_file.fasta
+head -n 3 my_file.fasta 
+
 #cat imprime el contenido del archivo 
 #tr -s primero eliminará los espaciós y luego unirá con el caracter colocado en este caso la coma   
-#head -n 3 mostrará las tres primeras líneas del archivo
+# >  estos comandos serán impresos en el archivo temporal creado 
+#mv  nos movera-reescribirá nuestro archivo temporal en el original 
+#nos imprimirá las tres primeras líneas
 
 #Literal 6 
 echo ¿Cuántos isogrupos únicos hay en el archivo? 
+
+grep '>' my_file.fasta | cut -d ',' -f 4 | uniq | wc -l   
+#grep nos va a buscar unicamente las filas que tenga el signo puesto 
+#cut -d  se encarga en extraer los campos del archivo 
+#-f  va a a seleccionar las columnas indicadasque se encuentra delimitada por el caracter tabulador que están delimitados or la coma.
+ 
 
