@@ -46,6 +46,8 @@ echo ¿Cuántos isogrupos únicos hay en el archivo?
 grep '>' my_file.fasta | cut -d ',' -f 4 | uniq | wc -l   
 #grep nos va a buscar unicamente las filas que tenga el signo puesto 
 #cut -d  se encarga en extraer los campos del archivo 
-#-f  va a a seleccionar las columnas indicadasque se encuentra delimitada por el caracter tabulador que están delimitados or la coma.
- 
+#-f  va a a seleccionar las columnas indicadasque se encuentra delimitada por el caracter tabulador que están delimitados or la coma. 
+#uniq elimina líneas que se repita
+#wc -l cuenta el número de líneas que exite en la columna que se ha delimitado
+
 
