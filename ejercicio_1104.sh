@@ -18,11 +18,12 @@ cut -d ',' -f 10 ../data/Buzzard2015_data.csv | tail -n +2 | sort | uniq | wc -l
 
 echo El valor mínimo 
 cut -d ',' -f 10 ../data/Buzzard2015_data.csv | tail -n +2 | sort -r | head -n 1
-
+#sort -r ordena del menos hacia el mayor
 echo El valor máximo
 cut -d ',' -f 10 ../data/Buzzard2015_data.csv | tail -n +2 | sort -n | tail -n 1
 #sort -n va a ordenar los números 
-#tail -n 1 va a tomar la última línea del documento 
+#tail -n 1 va a tomar la última línea del documento
+ 
 
 
  
