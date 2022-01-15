@@ -50,8 +50,8 @@ grep '>' my_file.fasta | cut -d ',' -f 4 | uniq | wc -l
 #uniq elimina líneas que se repita
 #wc -l cuenta el número de líneas que exite en la columna que se ha delimitado
 
-#Literal 7 
-echo ¿Qué contig tiene el mayor número de lecturas, numreads? ¿Cuántas lecturas tiene?
+
+
 
 
 
